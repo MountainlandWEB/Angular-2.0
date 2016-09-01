@@ -10,7 +10,7 @@ export class CharacterService {
         return Promise.resolve(CHARACTERS);
     }
     
-    getCharactersSlowly(): Promise<Hero[]> {
+    getCharactersSlowly(): Promise<StarWarsCharacter[]> {
         return new Promise<StarWarsCharacter[]>(resolve =>
             setTimeout(resolve, 2000))
             .then(() => this.getCharacters());
